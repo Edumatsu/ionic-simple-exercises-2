@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Planetas
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+
+      <ion-card *ngIf="item.name" class="star-card">
+          <ion-card-header>
+            <ion-card-title>{{item.name}}</ion-card-title>
+            <span class="close" (click)="hideCard()">X</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+              <strong>Diametro:</strong> {{item.diameter}} <br>
+              <strong>Gravidade:</strong> {{item.gravity}} <br>
+              <strong>Tempo de orbita:</strong> {{item.orbital_period}} <br>
+              <strong>População:</strong> {{item.population}} <br>
+              <strong>Tempo de rotação:</strong> {{item.rotation_period}} <br>
+              <strong>Terreno:</strong> {{item.terrain}} <br>
+              
+          </ion-card-content>
+        </ion-card>
+
+    <ion-list>
+      <ion-item *ngFor="let item of items" (click)="showCard(item)">
+        {{item.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <img src="/assets/star_wars.png" alt="Star Wars" />
+      <ion-card-header>
+        <ion-card-subtitle>Vamos lá</ion-card-subtitle>
+        <ion-card-title>
+          App Star Wars
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Neste App é possível conhecer os filmes, 
+          pessoas, planetas e as naves estelares da saga Star Wars.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Conteúdos</ion-label>
+      </ion-list-header>
+
+      <ion-item routerDirection="'root'" routerLink="/people/list">
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label>
+          Pessoas
+        </ion-label>
+      </ion-item>
+
+      <ion-item routerDirection="'root'" routerLink="/films/list">
+        <ion-icon slot="start" name="videocam"></ion-icon>
+        <ion-label>
+          Filmes
+        </ion-label>
+      </ion-item>
+
+      <ion-item routerDirection="'root'" routerLink="/planets/list">
+        <ion-icon slot="start" name="planet"></ion-icon>
+        <ion-label>
+          Planetas
+        </ion-label>
+      </ion-item>
+      
+      <ion-item routerDirection="'root'" routerLink="/starships/list">
+        <ion-icon slot="start" name="paper-plane"></ion-icon>
+        <ion-label>
+          Naves estelares
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+</ion-content>
